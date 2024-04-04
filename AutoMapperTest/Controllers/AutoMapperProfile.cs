@@ -9,6 +9,13 @@ namespace AutoMapperTest.Controllers
         {
             CreateMap<SuperHero, SuperHeroDto>();
             CreateMap<SuperHeroDto, SuperHero>();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<SuperHero, SuperHeroDto>();
+                //cfg.AddProfile<AutoMapperProfile>;
+            });
         }
+        
     }
 }
